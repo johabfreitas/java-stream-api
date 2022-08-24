@@ -26,6 +26,11 @@ public class Main {
 //		}
 		double salarioTotal = empregados.stream().mapToDouble(emp -> emp.getSalario()).sum();
 		System.out.println("Salário total: R$" + salarioTotal);
+		
+		//Expressão lambda
+		Mensageiro mensageiro = (mensagem) ->
+			System.out.println("Mensagem da expressão lambda: " + mensagem);
+		mensageiro.emitirMensagem("TreinaWeb");
 	}
 
 }
